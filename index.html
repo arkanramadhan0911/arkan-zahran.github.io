@@ -1237,24 +1237,14 @@
     if (e.key === 'Escape') tutupLightbox();
   });
 
-  // ── DOWNLOAD CV ──
-  function downloadCV() {
-    const files = [
-      { url: 'CV Arkan Zahran Ramadhan-1.pdf',  nama: 'CV Arkan Zahran-Ramadhan.pdf' },
-      { url: 'CV ATS ARKAN1.pdf', nama: 'CV ATS ARKAN.pdf' }
-    ];
-
-    files.forEach((file, index) => {
-      setTimeout(() => {
-        const a = document.createElement('a');
-        a.href = file.url;
-        a.download = file.nama;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-      }, index * 500);
-    });
-  }
+ function downloadCV() {
+  const a = document.createElement('a');
+  a.href = 'CV Arkan Zahran Ramadhan.zip'; // nama file zip kamu
+  a.download = 'CV Arkan Zahran Ramadhan.zip';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
  
 </script>
 </body>
