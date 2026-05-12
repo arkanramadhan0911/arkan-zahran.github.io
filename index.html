@@ -22,11 +22,9 @@
     --radius: 12px;
     --radius-lg: 20px;
   }
-
+ 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   html { scroll-behavior: smooth; }
-
   body {
     font-family: 'DM Sans', sans-serif;
     background: var(--bg);
@@ -34,7 +32,7 @@
     line-height: 1.6;
     overflow-x: hidden;
   }
-
+ 
   /* ── NAV ── */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -74,7 +72,7 @@
     text-decoration: none; transition: background 0.2s, transform 0.1s;
   }
   .nav-cta:hover { background: var(--blue-dark); transform: translateY(-1px); }
-
+ 
   /* ── HERO ── */
   .hero {
     min-height: 100vh;
@@ -107,7 +105,6 @@
     animation: blink 1.8s infinite;
   }
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
-
   .hero-greeting {
     font-family: 'DM Sans', sans-serif;
     font-size: 18px; font-weight: 400; color: var(--text-muted);
@@ -126,9 +123,7 @@
     font-weight: 600; color: var(--text-muted);
     margin-bottom: 24px;
   }
-  .hero-role span {
-    color: var(--accent); position: relative;
-  }
+  .hero-role span { color: var(--accent); position: relative; }
   .hero-desc {
     font-size: 15px; color: var(--text-muted);
     max-width: 520px; line-height: 1.75;
@@ -141,16 +136,10 @@
     font-size: 14px; font-weight: 500; text-decoration: none;
     transition: all 0.2s; cursor: pointer; border: none;
   }
-  .btn-primary {
-    background: var(--blue); color: #fff;
-  }
+  .btn-primary { background: var(--blue); color: #fff; }
   .btn-primary:hover { background: var(--blue-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,86,219,0.3); }
-  .btn-outline {
-    background: transparent; color: var(--blue);
-    border: 1.5px solid var(--blue);
-  }
+  .btn-outline { background: transparent; color: var(--blue); border: 1.5px solid var(--blue); }
   .btn-outline:hover { background: var(--blue-light); transform: translateY(-2px); }
-
   .hero-stats {
     display: flex; gap: 32px; margin-top: 40px;
     padding-top: 32px; border-top: 1px solid var(--border);
@@ -162,13 +151,10 @@
     display: block;
   }
   .stat-label { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
-
+ 
   /* Avatar */
   .hero-visual { flex-shrink: 0; }
-  .avatar-card {
-    position: relative;
-    width: 280px; height: 340px;
-  }
+  .avatar-card { position: relative; width: 280px; height: 340px; }
   .avatar-bg {
     position: absolute; inset: 0;
     background: linear-gradient(135deg, #dbeafe, #e0f2fe);
@@ -205,13 +191,10 @@
   }
   .floating-tag.tag-1 { top: 20px; right: -30px; animation-delay: 0s; }
   .floating-tag.tag-2 { bottom: 60px; left: -40px; animation-delay: 1.5s; }
-  @keyframes float {
-    0%,100%{ transform: translateY(0); }
-    50%{ transform: translateY(-8px); }
-  }
+  @keyframes float { 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(-8px); } }
   .tag-icon { font-size: 16px; }
-
-  /* ── FADE IN ANIMATION ── */
+ 
+  /* ── FADE IN ── */
   .reveal {
     opacity: 0; transform: translateY(30px);
     transition: opacity 0.7s ease, transform 0.7s ease;
@@ -221,7 +204,7 @@
   .reveal-delay-2 { transition-delay: 0.2s; }
   .reveal-delay-3 { transition-delay: 0.3s; }
   .reveal-delay-4 { transition-delay: 0.4s; }
-
+ 
   /* ── SECTION COMMON ── */
   section { padding: 96px 48px; }
   .section-inner { max-width: 1100px; margin: 0 auto; }
@@ -241,12 +224,10 @@
     font-size: 16px; color: var(--text-muted); max-width: 520px;
     line-height: 1.7; margin-bottom: 48px;
   }
-
+ 
   /* ── ABOUT ── */
   #about { background: var(--bg-2); }
-  .about-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;
-  }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
   .about-card {
     background: #fff; border: 1px solid var(--border);
     border-radius: var(--radius-lg); padding: 28px;
@@ -259,26 +240,20 @@
     display: flex; align-items: center; justify-content: center;
     font-size: 20px; margin-bottom: 14px;
   }
-  .about-card h3 {
-    font-family: 'Syne', sans-serif;
-    font-size: 16px; font-weight: 700; margin-bottom: 8px;
-  }
+  .about-card h3 { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 8px; }
   .about-card p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
   .about-cards { display: flex; flex-direction: column; gap: 16px; }
-  .about-info 
-  .info-item {
+  .about-info .info-item {
     display: flex; gap: 12px; align-items: flex-start;
     padding: 14px 0; border-bottom: 1px solid var(--border);
   }
   .info-item:last-child { border-bottom: none; }
   .info-label { font-size: 13px; color: var(--text-muted); min-width: 120px; }
   .info-value { font-size: 14px; font-weight: 500; color: var(--text); }
-
+ 
   /* ── SKILLS ── */
   #skills { background: var(--bg); }
-  .skills-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;
-  }
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
   .skill-category {
     background: var(--bg-2); border: 1px solid var(--border);
     border-radius: var(--radius-lg); padding: 28px;
@@ -292,19 +267,15 @@
   }
   .skill-cat-icon { font-size: 18px; }
   .skill-items { display: flex; flex-direction: column; gap: 12px; }
-  .skill-item 
-  .skill-name { font-size: 13px; color: var(--text-muted); margin-bottom: 6px; display: flex; justify-content: space-between; }
+  .skill-item .skill-name { font-size: 13px; color: var(--text-muted); margin-bottom: 6px; display: flex; justify-content: space-between; }
   .skill-pct { font-size: 12px; font-weight: 500; color: var(--blue); }
-  .skill-bar {
-    height: 6px; background: var(--border);
-    border-radius: 100px; overflow: hidden;
-  }
+  .skill-bar { height: 6px; background: var(--border); border-radius: 100px; overflow: hidden; }
   .skill-fill {
     height: 100%; background: linear-gradient(90deg, var(--blue), var(--accent));
     border-radius: 100px; width: 0%;
     transition: width 1.2s ease;
   }
-
+ 
   /* ── EXPERIENCE ── */
   #experience { background: var(--bg-2); }
   .timeline { position: relative; padding-left: 32px; }
@@ -331,27 +302,18 @@
     background: var(--blue-light); padding: 4px 12px;
     border-radius: 100px; display: inline-block; margin-bottom: 12px;
   }
-  .timeline-role {
-    font-family: 'Syne', sans-serif;
-    font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 4px;
-  }
-  .timeline-place {
-    font-size: 14px; color: var(--text-muted); margin-bottom: 14px;
-  }
+  .timeline-role { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+  .timeline-place { font-size: 14px; color: var(--text-muted); margin-bottom: 14px; }
   .timeline-duties { list-style: none; display: flex; flex-direction: column; gap: 8px; }
   .timeline-duties li {
     font-size: 14px; color: var(--text-muted);
     display: flex; align-items: flex-start; gap: 8px;
   }
-  .timeline-duties li::before {
-    content: '→'; color: var(--blue); font-weight: 700; flex-shrink: 0; margin-top: 1px;
-  }
-
+  .timeline-duties li::before { content: '→'; color: var(--blue); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+ 
   /* ── PROJECTS ── */
   #projects { background: var(--bg); }
-  .projects-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;
-  }
+  .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
   .project-card {
     background: var(--bg-2); border: 1px solid var(--border);
     border-radius: var(--radius-lg); overflow: hidden;
@@ -367,24 +329,109 @@
   .project-thumb.cyan { background: linear-gradient(135deg, #cffafe, #a5f3fc); }
   .project-thumb.green { background: linear-gradient(135deg, #dcfce7, #bbf7d0); }
   .project-body { padding: 20px 22px; }
-  .project-title {
-    font-family: 'Syne', sans-serif;
-    font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 8px;
-  }
+  .project-title { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
   .project-desc { font-size: 13px; color: var(--text-muted); line-height: 1.7; margin-bottom: 14px; }
   .project-tags { display: flex; gap: 6px; flex-wrap: wrap; }
-  .project-tag {
-    font-size: 11px; font-weight: 500; color: var(--blue);
-    background: var(--blue-light); padding: 4px 10px; border-radius: 100px;
+  .project-tag { font-size: 11px; font-weight: 500; color: var(--blue); background: var(--blue-light); padding: 4px 10px; border-radius: 100px; }
+ 
+  /* ── GALLERY SERTIFIKAT & PKL ── */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 0;
   }
-
+  .gallery-card {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
+  .gallery-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(26,86,219,0.13);
+  }
+  .gallery-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+  }
+  .gallery-placeholder {
+    width: 100%;
+    height: 210px;
+    background: linear-gradient(135deg, #dbeafe 0%, #e0f2fe 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .gallery-placeholder .ph-icon { font-size: 44px; }
+  .gallery-placeholder .ph-text {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  .gallery-caption { padding: 18px 20px; }
+  .gallery-caption h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 15px; font-weight: 700;
+    color: var(--text); margin-bottom: 4px;
+  }
+  .gallery-caption p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+  .gallery-badge {
+    display: inline-block;
+    font-size: 11px; font-weight: 600;
+    padding: 3px 10px; border-radius: 100px;
+    background: var(--blue-light); color: var(--blue);
+    margin-top: 10px;
+  }
+  .gallery-badge.green { background: #dcfce7; color: #16a34a; }
+  .gallery-badge.cyan { background: #cffafe; color: #0891b2; }
+ 
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed; inset: 0; z-index: 999;
+    background: rgba(0,0,0,0.88);
+    align-items: center; justify-content: center;
+    padding: 24px;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox-img-wrap {
+    position: relative;
+    max-width: 90vw;
+    max-height: 88vh;
+  }
+  .lightbox-img-wrap img {
+    max-width: 100%;
+    max-height: 88vh;
+    border-radius: 14px;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.6);
+    display: block;
+  }
+  .lightbox-close {
+    position: fixed; top: 20px; right: 28px;
+    font-size: 38px; color: #fff; cursor: pointer;
+    line-height: 1; opacity: 0.8; transition: opacity 0.2s;
+    z-index: 1000;
+  }
+  .lightbox-close:hover { opacity: 1; }
+  .lightbox-caption {
+    text-align: center;
+    color: rgba(255,255,255,0.75);
+    font-size: 13px;
+    margin-top: 14px;
+  }
+ 
   /* ── CONTACT ── */
   #contact { background: var(--bg-2); }
-  .contact-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;
-  }
-  .contact-info 
-  .contact-item {
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  .contact-info .contact-item {
     display: flex; align-items: center; gap: 16px;
     padding: 16px; border-radius: var(--radius);
     background: #fff; border: 1px solid var(--border);
@@ -414,22 +461,19 @@
   }
   .form-group textarea { resize: vertical; min-height: 120px; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-
+ 
   /* ── FOOTER ── */
   footer {
     background: var(--text); color: #fff;
     padding: 40px 48px; text-align: center;
   }
-  .footer-brand {
-    font-family: 'Syne', sans-serif;
-    font-size: 20px; font-weight: 800; margin-bottom: 8px;
-  }
+  .footer-brand { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800; margin-bottom: 8px; }
   .footer-brand span { color: var(--accent); }
   .footer-text { font-size: 13px; color: rgba(255,255,255,0.45); margin-top: 4px; }
   .footer-links { display: flex; justify-content: center; gap: 24px; margin: 20px 0; }
   .footer-links a { color: rgba(255,255,255,0.6); font-size: 13px; text-decoration: none; transition: color 0.2s; }
   .footer-links a:hover { color: #fff; }
-
+ 
   /* ── SCROLL TO TOP ── */
   .scroll-top {
     position: fixed; bottom: 32px; right: 32px; z-index: 99;
@@ -444,52 +488,42 @@
   }
   .scroll-top.show { opacity: 1; transform: translateY(0); }
   .scroll-top:hover { background: var(--blue-dark); }
-  /* ── TABLET & IPAD (768px - 1024px) ── */
+ 
+  /* ── TABLET (768px - 1024px) ── */
   @media(max-width: 1024px) and (min-width: 769px){
     nav { padding: 16px 32px; }
     .nav-links a { font-size: 13px; }
     .nav-links { gap: 20px; }
-
     .hero { padding: 110px 36px 80px; }
     .hero-grid { gap: 40px; }
     .hero-name { font-size: 38px; }
     .hero-desc { font-size: 14px; max-width: 420px; }
-
     .avatar-card { width: 220px; height: 270px; }
     .avatar-initials-big { font-size: 52px; }
     .floating-tag.tag-1 { right: -8px; font-size: 11px; padding: 6px 10px; }
     .floating-tag.tag-2 { left: -8px; font-size: 11px; padding: 6px 10px; }
-
     section { padding: 72px 36px; }
     .about-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
     .contact-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
     .skills-grid { grid-template-columns: repeat(2, 1fr); }
     .projects-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
     footer { padding: 36px 32px; }
   }
-
+ 
   /* ── MOBILE (max 768px) ── */
   @media(max-width: 768px){
-    /* Navbar: sembunyikan link, tampilkan brand saja */
     nav { padding: 14px 20px; }
     nav.scrolled { padding: 10px 20px; }
     .nav-links, .nav-cta { display: none; }
-
-    /* Hero: foto pindah ke atas, teks di bawah */
     .hero { padding: 90px 20px 56px; min-height: auto; }
     .hero-grid { grid-template-columns: 1fr; gap: 28px; text-align: center; }
-
-    .hero-visual {
-      display: flex;
-      justify-content: center;
-      order: -1;
-    }
+    .hero-visual { display: flex; justify-content: center; order: -1; }
     .avatar-card { width: 170px; height: 210px; }
     .avatar-initials-big { font-size: 44px; }
     .avatar-hint { font-size: 10px; white-space: nowrap; }
     .floating-tag.tag-1 { right: -6px; top: 8px; font-size: 11px; padding: 5px 9px; }
     .floating-tag.tag-2 { left: -6px; bottom: 36px; font-size: 11px; padding: 5px 9px; }
-
     .hero-badge { margin: 0 auto 14px; }
     .hero-greeting { font-size: 15px; }
     .hero-name { font-size: 30px; }
@@ -499,44 +533,34 @@
     .hero-stats { gap: 16px; justify-content: center; flex-wrap: wrap; padding-top: 24px; margin-top: 28px; }
     .stat-num { font-size: 22px; }
     .stat-label { font-size: 11px; }
-
-    /* Sections */
     section { padding: 56px 20px; }
     .section-title { font-size: 24px; }
     .section-subtitle { font-size: 14px; margin-bottom: 32px; }
-
-    /* About: 1 kolom */
     .about-grid { grid-template-columns: 1fr; gap: 28px; }
     .about-card { padding: 20px; }
     .info-label { min-width: 100px; font-size: 12px; }
-
     .skills-grid { grid-template-columns: 1fr; }
     .skill-category { padding: 20px; }
-
     .timeline { padding-left: 22px; }
     .timeline-dot { left: -22px; width: 13px; height: 13px; }
     .timeline-card { padding: 18px 20px; }
     .timeline-role { font-size: 16px; }
-
     .projects-grid { grid-template-columns: 1fr; }
-
+    .gallery-grid { grid-template-columns: 1fr; }
     .contact-grid { grid-template-columns: 1fr; gap: 28px; }
     .form-row { grid-template-columns: 1fr; }
     .contact-item { padding: 12px; }
-
     footer { padding: 28px 20px; }
     .footer-links { flex-wrap: wrap; gap: 14px; justify-content: center; }
     .footer-text { font-size: 12px; }
-
-    /* Scroll to top */
     .scroll-top { bottom: 18px; right: 18px; width: 38px; height: 38px; font-size: 15px; }
   }
-
+ 
   @media(max-width: 390px){
     .hero-name { font-size: 26px; }
     .avatar-card { width: 145px; height: 180px; }
     .avatar-initials-big { font-size: 36px; }
-    .floating-tag { display: none; } 
+    .floating-tag { display: none; }
     .btn { padding: 10px 16px; font-size: 13px; }
     .hero-stats { gap: 12px; }
     .stat-num { font-size: 20px; }
@@ -546,7 +570,7 @@
 </style>
 </head>
 <body>
-
+ 
 <!-- NAV -->
 <nav id="navbar">
   <a href="#home" class="nav-brand">Arkan zahran ramadhan<span>.</span></a>
@@ -556,11 +580,13 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#sertifikat">Sertifikat</a></li>
+    <li><a href="#pkl">Foto PKL</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Hubungi Saya</a>
 </nav>
-
+ 
 <!-- HERO -->
 <section id="home">
   <div class="hero-bg"></div>
@@ -579,7 +605,7 @@
         Lulusan SMK Teknik Komputer dan Jaringan (2026) dari SMK Daarul Uluum. Berpengalaman sebagai IT Support sekolah dan Operasional di Surya Abadi Computer. Ahli dalam perakitan PC, instalasi sistem operasi Windows, serta troubleshooting hardware dan software.
       </p>
       <div class="hero-actions reveal reveal-delay-3">
-       <a href="CV%20Arkan%20Zahran%20Ramadhan-1.pdf" download="CV-Arkan-Zahran-Ramadhan-1.pdf" class="btn btn-primary">Download CV</a>
+        <a href="CV-Arkan-Zahran-Ramadhan.pdf" download="CV-Arkan-Zahran-Ramadhan.pdf" class="btn btn-primary">Download CV</a>
         <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
       </div>
       <div class="hero-stats reveal reveal-delay-4">
@@ -597,7 +623,7 @@
         </div>
       </div>
     </div>
-
+ 
     <div class="hero-visual reveal reveal-delay-2">
       <div class="avatar-card">
         <div class="avatar-bg"></div>
@@ -615,14 +641,14 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- ABOUT -->
 <section id="about">
   <div class="section-inner">
     <div class="section-tag">Tentang Saya</div>
     <h2 class="section-title reveal">Siapa Arkan?</h2>
     <p class="section-subtitle reveal">Seorang fresh graduate yang bersemangat di bidang IT dan siap berkontribusi di dunia kerja.</p>
-
+ 
     <div class="about-grid">
       <div class="about-info reveal">
         <div class="info-item">
@@ -650,7 +676,7 @@
           <span class="info-value">IT Support, Teknisi Komputer.</span>
         </div>
       </div>
-
+ 
       <div class="about-cards">
         <div class="about-card reveal reveal-delay-1">
           <div class="about-card-icon">🖥</div>
@@ -671,14 +697,14 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- SKILLS -->
 <section id="skills">
   <div class="section-inner">
     <div class="section-tag">Keahlian</div>
     <h2 class="section-title reveal">Kemampuan Teknis</h2>
     <p class="section-subtitle reveal">Skill yang telah diasah melalui pendidikan formal dan pengalaman langsung di lapangan.</p>
-
+ 
     <div class="skills-grid">
       <div class="skill-category reveal">
         <div class="skill-cat-title"><span class="skill-cat-icon">🖥</span> Hardware</div>
@@ -697,7 +723,7 @@
           </div>
         </div>
       </div>
-
+ 
       <div class="skill-category reveal reveal-delay-1">
         <div class="skill-cat-title"><span class="skill-cat-icon">💻</span> Software & OS</div>
         <div class="skill-items">
@@ -715,7 +741,7 @@
           </div>
         </div>
       </div>
-
+ 
       <div class="skill-category reveal reveal-delay-2">
         <div class="skill-cat-title"><span class="skill-cat-icon">🌐</span> Jaringan</div>
         <div class="skill-items">
@@ -733,7 +759,7 @@
           </div>
         </div>
       </div>
-
+ 
       <div class="skill-category reveal reveal-delay-3">
         <div class="skill-cat-title"><span class="skill-cat-icon">🤝</span> Soft Skills</div>
         <div class="skill-items">
@@ -754,14 +780,14 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-inner">
     <div class="section-tag">Pengalaman</div>
     <h2 class="section-title reveal">Riwayat Pengalaman</h2>
     <p class="section-subtitle reveal">Perjalanan belajar dan bekerja yang membentuk kemampuan saya di bidang IT.</p>
-
+ 
     <div class="timeline">
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
@@ -777,7 +803,7 @@
           </ul>
         </div>
       </div>
-
+ 
       <div class="timeline-item reveal reveal-delay-1">
         <div class="timeline-dot"></div>
         <div class="timeline-card">
@@ -792,7 +818,7 @@
           </ul>
         </div>
       </div>
-
+ 
       <div class="timeline-item reveal reveal-delay-2">
         <div class="timeline-dot"></div>
         <div class="timeline-card">
@@ -810,14 +836,14 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- PROJECTS -->
 <section id="projects">
   <div class="section-inner">
     <div class="section-tag">Proyek</div>
     <h2 class="section-title reveal">Proyek & Hasil Kerja</h2>
     <p class="section-subtitle reveal">Beberapa proyek dan pekerjaan nyata yang pernah saya kerjakan.</p>
-
+ 
     <div class="projects-grid">
       <div class="project-card reveal">
         <div class="project-thumb blue">🖥</div>
@@ -832,7 +858,7 @@
           </div>
         </div>
       </div>
-
+ 
       <div class="project-card reveal reveal-delay-1">
         <div class="project-thumb cyan">🌐</div>
         <div class="project-body">
@@ -846,7 +872,7 @@
           </div>
         </div>
       </div>
-
+ 
       <div class="project-card reveal reveal-delay-2">
         <div class="project-thumb green">🌐</div>
         <div class="project-body">
@@ -862,14 +888,149 @@
     </div>
   </div>
 </section>
-
+ 
+<!-- ═══════════════════════════════════════════
+     SERTIFIKAT  (section baru)
+═══════════════════════════════════════════ -->
+<section id="sertifikat" style="background: var(--bg-2);">
+  <div class="section-inner">
+    <div class="section-tag">Pencapaian</div>
+    <h2 class="section-title reveal">Sertifikat & Penghargaan</h2>
+    <p class="section-subtitle reveal">Sertifikat yang saya peroleh selama pendidikan dan praktik kerja lapangan.</p>
+ 
+    <div class="gallery-grid">
+ 
+      <!-- SERTIFIKAT 1
+           Ganti src="sertifikat/sertifikat-1.jpg" dengan path foto kamu -->
+      <div class="gallery-card reveal" onclick="bukaLightbox('sert1', 'Nama Sertifikat 1')">
+        <img id="sert1" src="sertifikat pkl sekolah.jpg" alt="Sertifikat 1"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="gallery-placeholder" style="display:none;">
+          <span class="ph-icon">🏆</span>
+          <span class="ph-text">Upload foto sertifikat</span>
+        </div>
+        <div class="gallery-caption">
+          <h4>Sertifikat penghargaan sekolah program pembelajaran Praktik Kerja Lapangan dengan nilai akhir 90.02  </h4>
+          <p>SMK Daarul Uluum / Popy Sopiyati S.E M,Pd. · 2025</p>
+          <span class="gallery-badge">Praktik Kerja Lapangan</span>
+        </div>
+      </div>
+ 
+      <!-- SERTIFIKAT 2 -->
+      <div class="gallery-card reveal reveal-delay-1" onclick="bukaLightbox('sert2', 'Nama Sertifikat 2')">
+        <img id="sert2" src="sertifikat PKL.jpg" alt="Sertifikat 2"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="gallery-placeholder" style="display:none;">
+          <span class="ph-icon">🏆</span>
+          <span class="ph-text">Upload foto sertifikat</span>
+        </div>
+        <div class="gallery-caption">
+          <h4>Sertifikat Penghargaan PKL pada Toko Surya Abadi Computer</h4>
+          <p>Surya Abadi Computer / Phang Arianton · 2025</p>
+          <span class="gallery-badge green">Praktik kerja lapangan</span>
+        </div>
+      </div>
+ 
+      <!-- SERTIFIKAT 3 -->
+      <div class="gallery-card reveal reveal-delay-2" onclick="bukaLightbox('sert3', 'Nama Sertifikat 3')">
+        <img id="sert3" src="sertifikat OSIS.jpg" alt="Sertifikat 3"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="gallery-placeholder" style="display:none;">
+          <span class="ph-icon">🏆</span>
+          <span class="ph-text">Upload foto sertifikat</span>
+        </div>
+        <div class="gallery-caption">
+          <h4>Sertifikat penghargaan Organisasi OSIS SMK Daarul Uluum</h4>
+          <p>SMK Daarul Uluum / Lylan Tiara Sani S.Pd · 2025</p>
+          <span class="gallery-badge cyan">Organisasi</span>
+        </div>
+      </div>
+ 
+      <!-- ✅ Duplikasi card di atas untuk tambah sertifikat baru -->
+ 
+    </div>
+  </div>
+</section>
+ 
+<!-- ═══════════════════════════════════════════
+     FOTO PKL  (section baru)
+═══════════════════════════════════════════ -->
+<section id="pkl">
+  <div class="section-inner">
+    <div class="section-tag">PKL</div>
+    <h2 class="section-title reveal">Foto Kegiatan PKL</h2>
+    <p class="section-subtitle reveal">Dokumentasi kegiatan selama Praktik Kerja Lapangan di Surya Abadi Computer.</p>
+ 
+    <div class="gallery-grid">
+ 
+      <!-- FOTO PKL 1
+           Ganti src="foto-pkl/pkl-1.jpg" dengan path foto kamu -->
+      <div class="gallery-card reveal" onclick="bukaLightbox('pkl1', 'Merakit PC Pelanggan')">
+        <img id="pkl1" src="merakit pc.jpg" alt="Foto PKL 1"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="gallery-placeholder" style="display:none;">
+          <span class="ph-icon">📸</span>
+          <span class="ph-text">Upload foto PKL</span>
+        </div>
+        <div class="gallery-caption">
+          <h4>Merakit PC Pelanggan</h4>
+          <p>Proses perakitan dan instalasi komponen hardware sesuai permintaan pelanggan.</p>
+          <span class="gallery-badge">Perakitan PC</span>
+        </div>
+      </div>
+ 
+      <!-- FOTO PKL 2 -->
+      <div class="gallery-card reveal reveal-delay-1" onclick="bukaLightbox('pkl2', 'Setup Jaringan')">
+        <img id="pkl2" src="crimping kabel.jpg" alt="Foto PKL 2"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="gallery-placeholder" style="display:none;">
+          <span class="ph-icon">📸</span>
+          <span class="ph-text">Upload foto PKL</span>
+        </div>
+        <div class="gallery-caption">
+          <h4>Crimping kabel Straight.</h4>
+          <p>Crimping kabel Straight untuk kebutuhan Pelanggan.</p>
+          <span class="gallery-badge green">Crimping Cable.</span>
+        </div>
+      </div>
+ 
+      <!-- FOTO PKL 3 -->
+      <div class="gallery-card reveal reveal-delay-2" onclick="bukaLightbox('pkl3', 'Instalasi Software')">
+        <img id="pkl3" src="installasi windows.jpg" alt="Foto PKL 3"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="gallery-placeholder" style="display:none;">
+          <span class="ph-icon">📸</span>
+          <span class="ph-text">Upload foto PKL</span>
+        </div>
+        <div class="gallery-caption">
+          <h4>Installasi Windows</h4>
+          <p>Installasi OS Windows</p>
+          <span class="gallery-badge cyan">Installasi Windows</span>
+        </div>
+      </div>
+ 
+      <!-- ✅ Duplikasi card di atas untuk tambah foto PKL baru -->
+ 
+    </div>
+  </div>
+</section>
+ 
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="tutupLightbox(event)">
+  <span class="lightbox-close" onclick="tutupLightbox()">✕</span>
+  <div class="lightbox-img-wrap">
+    <img id="lightbox-img" src="" alt="">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+</div>
+ 
 <!-- CONTACT -->
 <section id="contact">
   <div class="section-inner">
     <div class="section-tag">Kontak</div>
     <h2 class="section-title reveal">Hubungi Saya</h2>
     <p class="section-subtitle reveal">Tertarik untuk bekerja sama atau punya pertanyaan? Jangan ragu untuk menghubungi saya!</p>
-
+ 
     <div class="contact-grid">
       <div class="contact-info reveal">
         <div class="contact-item">
@@ -897,11 +1058,11 @@
           <div class="contact-icon">🐱</div>
           <div>
             <div class="contact-label">GitHub</div>
-            <div class="contact-value">github.com/arkanramadhan0911/arkan-zahran.github.io</div>
+            <div class="contact-value">github.com/arkan-zahran</div>
           </div>
         </div>
       </div>
-
+ 
       <div class="reveal reveal-delay-1">
         <div class="contact-form">
           <div class="form-row">
@@ -930,25 +1091,49 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-brand">Arkan Zahran Ramadhan<span>.</span></div>
+  <div class="footer-brand">Arkan Zahran Ramadhan.<span>.</span></div>
   <div class="footer-links">
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
+    <a href="#sertifikat">Sertifikat</a>
+    <a href="#pkl">Foto PKL</a>
     <a href="#contact">Contact</a>
   </div>
   <p class="footer-text">© 2026 Arkan Zahran Ramadhan.</p>
 </footer>
-
+ 
 <!-- SCROLL TO TOP -->
 <a href="#home" class="scroll-top" id="scrollTop">↑</a>
 
 <script>
+  // ── HAMBURGER MENU ──
+  function toggleMenu() {
+    const drawer = document.getElementById('navDrawer');
+    const overlay = document.getElementById('navOverlay');
+    const btn = document.getElementById('hamburger');
+    const isOpen = drawer.classList.contains('open');
+    drawer.classList.toggle('open', !isOpen);
+    overlay.classList.toggle('open', !isOpen);
+    btn.classList.toggle('open', !isOpen);
+    document.body.style.overflow = isOpen ? '' : 'hidden';
+  }
+  function tutupMenu() {
+    document.getElementById('navDrawer').classList.remove('open');
+    document.getElementById('navOverlay').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  // Tutup drawer saat resize ke desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1024) tutupMenu();
+  });
+ 
   // Navbar scroll effect
   const navbar = document.getElementById('navbar');
   const scrollTop = document.getElementById('scrollTop');
@@ -962,7 +1147,7 @@
     }
     updateActiveNav();
   });
-
+ 
   // Active nav link
   function updateActiveNav(){
     const sections = document.querySelectorAll('section[id]');
@@ -976,7 +1161,7 @@
       if(a.getAttribute('href') === '#' + current) a.classList.add('active');
     });
   }
-
+ 
   // Reveal on scroll
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
@@ -985,12 +1170,12 @@
     });
   }, { threshold: 0.12 });
   reveals.forEach(el => observer.observe(el));
-
+ 
   // Trigger hero reveals immediately
   window.addEventListener('load', () => {
     document.querySelectorAll('.hero .reveal').forEach(el => el.classList.add('visible'));
   });
-
+ 
   // Skill bar animation
   const skillObserver = new IntersectionObserver((entries) => {
     entries.forEach(e => {
@@ -1002,7 +1187,7 @@
     });
   }, { threshold: 0.3 });
   document.querySelectorAll('.skill-category').forEach(el => skillObserver.observe(el));
-
+ 
   // Counter animation
   function animateCount(el, target, suffix=''){
     let start = 0; const step = target / 50;
@@ -1024,15 +1209,34 @@
     });
   }, { threshold: 0.5 });
   document.querySelectorAll('.hero-stats').forEach(el => statsObserver.observe(el));
-
+ 
   // Contact form
   function kirimPesan(){
     alert('Terima kasih! Pesan kamu sudah diterima. Saya akan segera membalas. 😊');
   }
-
-  function downloadCV(){
-  // sudah tidak dipakai
-}
+ 
+  // ── LIGHTBOX ──
+  function bukaLightbox(id, caption) {
+    const imgEl = document.getElementById(id);
+    // Jangan buka jika foto belum diupload (placeholder tampil)
+    if (!imgEl || imgEl.style.display === 'none') return;
+    document.getElementById('lightbox-img').src = imgEl.src;
+    document.getElementById('lightbox-img').alt = caption || '';
+    document.getElementById('lightbox-caption').textContent = caption || '';
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function tutupLightbox(e) {
+    // Tutup hanya jika klik di luar gambar atau tombol X
+    if (e && e.target.closest('.lightbox-img-wrap') && !e.target.closest('.lightbox-close')) return;
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  // Tutup dengan tombol Escape
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') tutupLightbox();
+  });
+ 
 </script>
 </body>
 </html>
